@@ -26,7 +26,7 @@ Load balancing ensures that the application will be highly **available**, in add
 
 **Load balancers are used to typically prevent and protect the availablility aspect of the CIA Traid. The reason is that they can protect against DDos (distributed denial-of-service) attacks. The advantage of a load balancer is that it is connected to various servers. This means that if one server is down or disfunctional the load balancer can direct traffic to another server.**
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 
 **Filebeat uses one single command to parse, collect, and visualize ELK logs. This is important because when taking raw logs and trying to understand them can be difficult and time consuming.**
 **Metricbeat is used to collect metric data from both operating systems and services that are running on a server. Instead of having to collect and export the data yourself from the server to Elasticsearch or Logstash, metricbeat does it for you.**
