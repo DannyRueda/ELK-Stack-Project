@@ -5,7 +5,15 @@ Note: The following image link needs to be updated. Replace diagram_filename.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook/yaml file may be used to install only certain pieces of it, such as Filebeat.
 
-TODO: Enter the playbook file.
+The following playbook/yaml files were created and used to generate the live ELK enviornment on Azure: 
+
+-  [DVWA (Act1.yml)](
+https://github.com/DannyRueda/ELK-Stack-Project/blob/main/Ansible/Act1.yml)
+-  [ELK install (ELK-startup.yml)](https://github.com/DannyRueda/ELK-Stack-Project/blob/main/Ansible/ELK-startup.yml)
+-  [Filebeat (filebeat-playbook.yml)](https://github.com/DannyRueda/ELK-Stack-Project/blob/main/Ansible/filebeat-playbook.yml)
+-  [Metricbeat (metricbeat-playbook.yml)](
+https://github.com/DannyRueda/ELK-Stack-Project/blob/main/Ansible/filebeat-playbook.yml)
+
 
 This document contains the following details:
 
