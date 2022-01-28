@@ -1,6 +1,7 @@
 # ELK-Stack-Project
-Automated ELK Stack Deployment
+### Automated ELK Stack Deployment
 The files in this repository were used to configure the network depicted below.
+
 ![Cloud Network](https://user-images.githubusercontent.com/56982183/151463107-2f33b421-e86a-4221-9799-ce64c1d20824.png)
 
 
