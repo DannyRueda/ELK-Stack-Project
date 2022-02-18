@@ -61,7 +61,6 @@ Only the Jump Box provisioner machine can accept connections from the Internet. 
 
 Machines within the network can only be accessed by an ansible container in the Jump Box provisioner.
 
-TODO: Which machine did you allow to access your ELK VM? What was its IP address?
 
 Jump Box Provisioner:
 - Public IP: 20.124.106.225
@@ -83,40 +82,41 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 
-TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
-...
-...
+ - Install Docker: allows docker to insall in the server, which is accessible to other servers.
+ - Python3-pip: allows a package-management system to install and manage software package in the server.
+ - Install Docker Module: allows the installation of docker components.
+ - Increase Memory: tells the docker container to increase the memory, allows more resources.
+ - Use more Memory: tells the docker container to use more memory, allows a smoother launch.
+ - Download/Launch Elk Container: allows the installation of the ELK docker container and the starts it with the specified paramiters attached to the playbook.
+ - Enable service docker on boot: Everytime the system reboots the service docker is still running.
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
-Note: The following image link needs to be updated. Replace docker_ps_output.png with the name of your screenshot image file.
+![docker_ps_output](https://user-images.githubusercontent.com/56982183/154605066-f1c597dc-ae0e-48c6-aa11-bdfc16d17656.jpg)
+
 
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 
-TODO: List the IP addresses of the machines you are monitoring
+ - 10.0.0.5 (Web 1)
+ - 10.0.0.6 (Web 2)
 
 We have installed the following Beats on these machines:
 
-TODO: Specify which Beats you successfully installed
+ - Filebeat
+ - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 
-TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc.
+ - Filebeat is used to monitor log files that the user specifies. We specified it to collect logins, which allows us to see who is logging into the system.
+
+ - Metricbeat is used to collect statistics and metrics. We collected memory, cpu, and other useful information which would help us what programs are taking up the systems resources.
 
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 SSH into the control node and follow the steps below:
 
-Copy the _____ file to _____.
-Update the _____ file to include...
-Run the playbook, and navigate to ____ to check that the installation worked as expected.
-
-TODO: Answer the following questions to fill in the blanks:
-
-Which file is the playbook? Where do you copy it?
-Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
-_Which URL do you navigate to in order to check that the ELK server is running?
-
-As a Bonus, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+Copy the ELK-startup.yml file to /etc/ansible/playbooks/ELK-startup.yml.
+Update the hosts file to include the ELK server by including the destination IP address.
+Run the playbook, and navigate to https://10.1.0.4:5601/app/kibana to check that the installation worked as expected.
