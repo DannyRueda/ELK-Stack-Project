@@ -27,7 +27,7 @@ This document contains the following details:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the Dang Vulnerable Web Application.
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 
 - Load balancers are used to typically prevent and protect the availablility aspect of the CIA Traid. The reason is that they can protect against DDos (distributed denial-of-service) attacks. The advantage of a load balancer is that it is connected to various servers. This means that if one server is down or disfunctional the load balancer can direct traffic to another server.
